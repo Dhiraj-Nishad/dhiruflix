@@ -1,0 +1,175 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #000;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #e50914;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+main {
+  margin-top: 70px; /* Adjust for fixed header */
+  padding: 20px;
+  text-align: center;
+}
+
+
+/* <header>
+<div id="box"><a href="">Edit Profile </a><a href="/logout">Logout</a>
+</header> */
+#box{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 60px;
+  top: 65px;
+  /* border: 1px solid rgba(255, 255, 255, 0.24); */
+  border: 1px solid #e5091485;
+  box-shadow: 2px 2px 3px 5px rgba(255, 255, 255, 0.171);
+  /* height: 40px; */
+  padding: 10px;
+  display: none;
+  background-color: black;
+  border-radius: 10px
+}
+
+#box a{
+  text-decoration: none;
+  color: white;
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  padding: 5px;
+}
+#box a:hover{
+  text-decoration: none;
+  color: #e50914;
+}
+
+
+/* editmovie and show movies */
+/* <div class="allmovies"> */
+.allmovies{
+  width: 90%,
+}
+
+.allmovies{
+  margin: 0 auto;
+}
+
+.box{
+  margin: 0 auto;
+}
+
+.box ul{
+  /* width: 120px; */
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .links{
+  margin-bottom: 10px;
+}
+
+.box ul li{
+  width: 161px;
+    height: 20rem;
+    border: 1px solid rgba(255, 0, 0, 0.233);
+    box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.384);
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 10px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 10px;
+}
+.box ul li:hover{
+  border: 1px solid rgba(255, 0, 0, 0.582);
+}
+
+.box ul li img{
+  object-fit: cover;
+  /* width: 100%; */
+  width: 171px;
+  height:80%,
+  margin-bottom: 10px;
+  border-radius: 10px 10px 0px 0px;
+  overflow:hidden
+}
+
+.box ul li a{
+  color: white;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.158);
+  padding: 5px ;
+  border-radius: 10px;
+  width: 30px;
+  height: 20px;
+
+}
+
+.box ul li h3{
+  margin: 15px;
+  margin-bottom: 13px;
+}
+
+.box ul li a:hover{
+  border: 1px solid rgba(255, 0, 0, 0.582);
+  box-shadow: 1px 1px 2px 2px rgba(255, 255, 255, 0.384);
+  background-color: black;
+}
+
+
+      /* <div class="box"> 
+        <ul>
+          <% movies.forEach(movie => { %>
+            <li>
+              <img src="<%= movie.movieImage %>" alt="<%= movie.movieName %>" width="200" />
+              <h3><%= movie.movieName %></h3> 
+              <a href="/admin/editmovie/<%= movie._id %>">Edit</a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div> */

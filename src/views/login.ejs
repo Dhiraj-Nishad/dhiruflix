@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+      }
+
+      header {
+        background-color: #000;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: flex-start; /* Align logo to the left */
+        align-items: center;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+      }
+
+      header h1 {
+        color: #e50914;
+        margin: 0;
+        font-size: 24px;
+        margin-left: 10px;
+      }
+
+      .login-container {
+        background-color: #1e1e1e;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+        margin-top: 100px; /* Adjust for fixed header */
+      }
+
+      .login-container h1 {
+        color: #e50914;
+        margin-bottom: 10px;
+      }
+
+      .login-container p {
+        margin-bottom: 20px;
+        color: #b3b3b3;
+      }
+
+      .login-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #333;
+        color: white;
+      }
+
+      .login-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #e50914;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .login-container button:hover {
+        background-color: #f6121d;
+      }
+
+      .login-container a {
+        color: #e50914;
+        text-decoration: none;
+      }
+
+      .login-container a:hover {
+        text-decoration: underline;
+      }
+      header h1 a {
+        color: #e50914;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="/">DhiruFlix</a></h1>
+    </header>
+
+    <!-- Login Form -->
+    <div class="login-container">
+      <% if (typeof message !== "undefined") { %>
+      <p class="error-message"><%= message %></p>
+      <% } %>
+      <h1>Welcome Back</h1>
+      <p>Sign in to your DhiruFlix account</p>
+      <form action="/login" method="POST">
+        <input type="email" name="email" placeholder="Email address" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Sign In</button>
+      </form>
+      <p>Don't have an account? <a href="/signup">Sign up</a></p>
+    </div>
+  </body>
+</html>

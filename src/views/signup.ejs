@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="/">DhiruFlix</a></h1>
+    </header>
+    <div class="signup-container">
+      <% if (typeof message !== "undefined") { %>
+      <p class="error-message"><%= message %></p>
+      <% } %>
+      <h1>Create Account</h1>
+      <p>Sign up for your DhiruFlix account</p>
+      <form action="/signup" method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="email" name="email" placeholder="Email address" required />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="/login">Sign in</a></p>
+    </div>
+  </body>
+</html>

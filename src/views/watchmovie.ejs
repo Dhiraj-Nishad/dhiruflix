@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: white;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #000;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header h1 {
+        color: #e50914;
+        margin: 0;
+      }
+
+      header nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        font-weight: bold;
+      }
+
+      header nav a.signup {
+        background-color: #e50914;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      header nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        text-align: center;
+        padding: 50px 20px;
+      }
+
+      main h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      main p {
+        font-size: 18px;
+        color: #b3b3b3;
+      }
+
+      footer {
+        background-color: #000;
+        color: white;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+      }
+
+      footer .footer1 {
+        display: flex;
+        margin: 0 auto;
+      }
+
+      footer .footer1 div {
+        border-right: 1px solid white;
+      }
+      footer p {
+        color: #b3b3b3;
+        margin: 0 auto;
+      }
+
+      footer div {
+        flex: 1;
+        margin: 10px;
+      }
+
+      footer h3 {
+        color: #e50914;
+        margin-bottom: 10px;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      footer hr {
+        border: 0;
+        border-top: 1px solid #333;
+        margin: 20px 0;
+      }
+
+      footer .copyright {
+        text-align: center;
+        color: #b3b3b3;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="/">DhiruFlix</a></h1>
+      <nav>
+        <a href="/login">Login</a>
+        <a href="/signup" class="signup">Sign Up</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div
+        class="movieheading"
+        style="
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+        "
+      >
+        <a
+          href="/"
+          style="
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.349);
+            border-radius: 22%;
+            box-shadow: 2px 1px 1px 2px rgba(255, 255, 255, 0.295);
+            justify-content: start;
+            left: 5px;
+          "
+          >Back</a
+        >
+        <h4
+          style="
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.678);
+            border-radius: 22%;
+            box-shadow: 2px 1px 2px 2px rgba(255, 255, 255, 0.295);
+            width: 200px;
+            font-size: 25px;
+          "
+        >
+          <%= moviename %>
+        </h4>
+      </div>
+      <% if (typeof ids !== "undefined") { %>
+      <p class="error-message"><%= ids %></p>
+      <% } %>
+      <div class="watchmovie">
+        <iframe
+          style="margin: 20px"
+          width="90%"
+          height="450"
+          src="<%= url  %>"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer1">
+        <div>
+          <h3>DhiruFlix</h3>
+          <p>Your ultimate destination for movies and entertainment.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div>
+          <h3>Connect With Us</h3>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">Instagram</a>
+        </div>
+      </div>
+      <hr />
+      <p class="copyright">&copy; 2025 DhiruFlix. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

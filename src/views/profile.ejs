@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>DhiruFlix</h1>
+      <div class="profile-icon">
+        <img onclick="toggleBox()"
+          src="https://cdn-icons-png.flaticon.com/512/8847/8847137.png"
+          alt="Profile"
+        />
+        <!-- <h1><a href="/logout">Logout</a></h1> -->
+      </div>
+      <div id="box"><a href="/profile/editprofile">Edit Profile </a><a href="/logout">Logout</a>
+    </header>
+
+    <!-- Main Content -->
+     <main>
+      <!-- <h1>Welcome to Your Profile</h1>
+      <p>Manage your account and preferences here.</p> -->
+       <div class="allmovies">
+      <div class="box">
+        <ul>
+          <% movies.forEach(movie => { %>
+            <li id="watch-<%= movie._id %>" onclick="redirectToWatch('<%= movie._id %>')">
+              <img src="<%= movie.movieImage %>" alt="<%= movie.movieName %>" width="200" />
+              <h3><%= movie.movieName %></h3>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+    </main> 
+   
+  </body>
+
+  <script>
+
+function toggleBox() {
+        const box = document.getElementById("box");
+        if (box.style.display === "none" || box.style.display === "") {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }    }
+
+
+        function redirectToWatch(movieId) {
+    // Redirect to the watch page for the selected movie
+    window.location.href = `/watch/${movieId}`;
+  }
+
+
+
+  </script>
+</html>

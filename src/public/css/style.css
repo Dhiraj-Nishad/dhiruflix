@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header, footer {
+    background-color: #333;
+    color: white;
+  }
+
+  footer .footer1 {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  footer .footer1 div {
+    border-right: 1px solid white;
+  }
+  footer p {
+    color: #b3b3b3;
+    margin: 0 auto;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }

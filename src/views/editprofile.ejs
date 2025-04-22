@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+
+  </head>
+  <style>
+    .signup-container form label {
+      font-size: 10px;
+      position: absolute;
+      padding-bottom: 15px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+    .signup-container{
+      position: relative;
+    }
+
+    .signup-container .back {
+      position: absolute;
+    color: white;
+    left: 3px;
+    top: 0;
+    margin: 8px;
+    text-decoration: underline;
+    font-size: 20px;
+    background: linear-gradient(red,yello);
+    /* -webkit-background-clip: text, */
+    }
+  </style>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="/profile">DhiruFlix</a></h1>
+      <div class="profile-icon">
+        <img onclick="toggleBox()"
+          src="https://cdn-icons-png.flaticon.com/512/8847/8847137.png"
+          alt="Profile"
+        />
+        <!-- <h1><a href="/logout">Logout</a></h1> -->
+      </div>
+      <div id="box"><a href="/profile/editprofile">Edit Profile </a><a href="/logout">Logout</a>
+    </header>
+
+    <div class="signup-container">
+      <a class="back" href="/profile">Back</a>
+      <h1>Update Profile</h1>
+      <% if (typeof message !== "undefined") { %>
+      <p class="error-message"><%= message %></p>
+      <% } %>
+      <form action="/profile/editprofile" method="POST">
+        <input
+          type="text"
+          name="username"
+          placeholder="Change Username"
+          required
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Change Email address"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Enter Current Password"
+          required
+        />
+        <button type="submit">Update Profile</button>
+      </form>
+      <!-- <p>Already have an account? <a href="/login">Sign in</a></p> -->
+    </div>
+  </body>
+  <script>
+
+    function toggleBox() {
+            const box = document.getElementById("box");
+            if (box.style.display === "none" || box.style.display === "") {
+              box.style.display = "block";
+            } else {
+              box.style.display = "none";
+            }    }
+    
+    
+    
+      </script>
+</html>

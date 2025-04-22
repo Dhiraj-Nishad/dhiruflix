@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/signup.css" />
+    <link rel="stylesheet" href="/css/profile.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="/admin/home">DhiruFlix Admin</a></h1>
+      <div class="profile-icon">
+        <img onclick="toggleBox()"
+          src="https://cdn-icons-png.flaticon.com/512/8847/8847137.png"
+          alt="Profile"
+        />
+        <!-- <h1><a href="/logout">Logout</a></h1> -->
+      </div>
+      <!-- <div class="addmovie"><a href="/addmovie">Add Movie</a></div> -->
+      <div id="box"><a href="/admin/profile/editprofile">Edit Profile </a><a href="">Change Password</a><a href="/logout">Logout</a>
+    </header>
+    <div class="signup-container">
+      <h1>Add Movie</h1>
+      <!-- <p>Sign up for your DhiruFlix account</p> -->
+      <form action="/admin/addmovies" method="POST">
+        <input type="text" name="movieName" placeholder="Enter Movie Name" required />
+        <input type="text" name="movieUrl" placeholder="Enter Embedded Video Url" required />
+        <input type="text" name="movieImage" placeholder="Enter Image url" required />
+        <div class="menu">
+          <label for="category">Choose a category :</label>
+          <select name="category" id="category">
+            <option value="Sci-Fi">Sci-Fi</option>
+            <option value="action">Action</option>
+            <option value="Thriller" >Thriller</option>
+            <option value="romance" >Romance</option>
+            <option value="animation" >Animations</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    function toggleBox() {
+        const box = document.getElementById("box");
+        if (box.style.display === "none" || box.style.display === "") {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }    }
+  </script>
+</html>

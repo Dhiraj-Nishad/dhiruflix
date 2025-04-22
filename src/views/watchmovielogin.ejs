@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile - DhiruFlix</title>
+    <link rel="stylesheet" href="/css/profile.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1><a href="/" style="text-decoration: none; color: red;">DhiruFlix</a></h1>
+      <div class="profile-icon">
+        <img onclick="toggleBox()"
+          src="https://cdn-icons-png.flaticon.com/512/8847/8847137.png"
+          alt="Profile"
+        />
+        <!-- <h1><a href="/logout">Logout</a></h1> -->
+      </div>
+      <div id="box"><a href="/profile/editprofile">Edit Profile </a><a href="/logout">Logout</a>
+    </header>
+
+    <!-- Main Content -->
+     <main>
+
+        <div
+        class="movieheading"
+        style="
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+        "
+      >
+        <a
+          href="/"
+          style="
+            position: absolute;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px;
+            background-color: rgba(0, 0, 0, 0.349);
+            border-radius: 22%;
+            box-shadow: 2px 1px 1px 2px rgba(255, 255, 255, 0.295);
+            justify-content: start;
+            left: 5px;
+          "
+          >Back</a
+        >
+        <h4
+          style="
+            color: black;
+            text-decoration: none;
+            padding: 15px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.678);
+            border-radius: 22%;
+            box-shadow: 2px 1px 2px 2px rgba(255, 255, 255, 0.295);
+            width: 200px;
+            font-size: 25px;
+          "
+        >
+          <%= moviename %>
+        </h4>
+      </div>
+        
+            <% if (typeof ids !== "undefined") { %>
+            <p class="error-message"><%= ids %></p>
+            <% } %>
+            <div class="watchmovie">
+              <iframe style="margin: 20px;"
+                width="90%"
+                height="450"
+                src="<%= url  %>"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen
+              ></iframe>
+            </div>
+          
+    </main> 
+   
+  </body>
+
+  <script>
+
+function toggleBox() {
+        const box = document.getElementById("box");
+        if (box.style.display === "none" || box.style.display === "") {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }    }
+
+
+        function redirectToWatch(movieId) {
+    // Redirect to the watch page for the selected movie
+    window.location.href = `/watch/${movieId}`;
+  }
+
+
+
+  </script>
+</html>

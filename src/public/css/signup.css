@@ -1,0 +1,109 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  background-color: #000;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #e50914;
+  margin: 0;
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+header h1 a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+.signup-container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.signup-container h1 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+.signup-container p {
+  margin-bottom: 20px;
+  color: #b3b3b3;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+}
+
+.signup-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.signup-container button:hover {
+  background-color: #f6121d;
+}
+
+.signup-container a {
+  color: #e50914;
+  text-decoration: none;
+}
+
+.signup-container a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: #e50914;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.menu{
+  padding:10px
+}
+
+.menu select{
+  background-color: transparent;
+  color: white;
+}
+.menu select option{
+  color: white;
+  background-color: #333;
+}
